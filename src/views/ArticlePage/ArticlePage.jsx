@@ -27,7 +27,7 @@ const MovieReview = () => {
       {article && (
         <div className="article">
           <CardMedia
-            sx={{ height: 245 }}
+            sx={{height: 245, width:1540, position: 'absolute', top:0 }}
             image={article.imageUrl}
             title="image"
           />
@@ -41,7 +41,7 @@ const MovieReview = () => {
             </Typography>
           </CardContent>
           </div>
-          <CardActions>
+          <CardActions sx={{width:1440}}>
             <Button size="small" onClick={handleClick}><WestOutlinedIcon/>
               Back to homepage
             </Button>
