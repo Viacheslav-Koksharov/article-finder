@@ -4,13 +4,11 @@ import ArticlePage from "../../views/ArticlePage";
 import Homepage from "../../views/HomePage";
 
 const App = () => {
-		return (
-			<>
+		return (			
 			<Routes>
 			  <Route path="/" element={<Homepage />} />
 			  <Route path="/articles/:id" element={<ArticlePage />} />
-			</Routes>
-		  </>
+			</Routes>		 
 	);
 };
 

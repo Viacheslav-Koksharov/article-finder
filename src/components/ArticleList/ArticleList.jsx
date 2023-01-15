@@ -1,11 +1,10 @@
 import React from 'react';
 import ArticleItem from '../ArticleItem';
+import '../../sass/components/_articleList.scss';
 
 const ArticleList = ({articles,value}) => (
-  <ul style={{ display: 'flex', flexWrap: 'wrap'}}>
-    
-    {articles.map(({ id, imageUrl, publishedAt, title,summary}) => (
-      
+  <ul className="list">    
+    {articles.map(({ id, imageUrl, publishedAt, title,summary}) => (      
       <ArticleItem
         key={id}
         id={id}
@@ -15,8 +14,7 @@ const ArticleList = ({articles,value}) => (
         summary={summary}
         filter={value}
       />
-    ))}
-    
+    ))}    
   </ul>
 
  

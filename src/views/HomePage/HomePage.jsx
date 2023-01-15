@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import Container from '../../components/Container';
 import Filter from '../../components/Filter';
 import ArticleList from '../../components/ArticleList';
 import { getArticles } from '../../services/api.js';
+import '../../sass/components/_homepage.scss';
 
 const HomePage = () => {
   const [articles, setArticles] = useState(null);
@@ -34,11 +36,11 @@ const HomePage = () => {
   }, []);
 
   return (
-    <>
+    <Container>
       <Filter value={filter} onFilterArticles={changeFilter} />
-      {articles && <p>{`Results: ${filterArticles.length}`}</p>}
+      {articles && <p className="homepage__results">{`Results: ${filterArticles.length}`}</p>}
       {articles && <ArticleList articles={filterArticles} value={filter}/>}
-    </>
+    </Container>
   );
 };
 

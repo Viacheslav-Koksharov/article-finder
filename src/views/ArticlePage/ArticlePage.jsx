@@ -26,9 +26,9 @@ const MovieReview = () => {
       {article && (
         <>
           <CardMedia
-            sx={{ height: 140 }}
+            sx={{ height: 245 }}
             image={article.imageUrl}
-            title="green iguana"
+            title="image"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
