@@ -41,7 +41,7 @@ const ArticleItem = ({ id, imageUrl, publishedAt, title,summary,filter}) => {
 
       return (
         <li key={id} className="item">
-        <Card sx={{ maxWidth: 400 }} >
+        <Card sx={{ width: 400 }} >
           <CardMedia
             sx={{ height: 217 }}
             image={imageUrl}

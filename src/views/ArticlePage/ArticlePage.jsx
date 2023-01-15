@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { getArticleById } from '../../services/api.js';
 import WestOutlinedIcon from '@mui/icons-material/WestOutlined';
+import '../../sass/components/_articlepage.scss';
 
 const MovieReview = () => {
   const { id } = useParams();
@@ -24,13 +25,14 @@ const MovieReview = () => {
   return (
     <>
       {article && (
-        <>
+        <div className="article">
           <CardMedia
             sx={{ height: 245 }}
             image={article.imageUrl}
             title="image"
           />
-          <CardContent>
+          <div className="container__article">
+          <CardContent sx={{ padding:0}}>
             <Typography gutterBottom variant="h5" component="div">
               {article.title}
             </Typography>
@@ -38,12 +40,13 @@ const MovieReview = () => {
               {article.summary}
             </Typography>
           </CardContent>
+          </div>
           <CardActions>
             <Button size="small" onClick={handleClick}><WestOutlinedIcon/>
               Back to homepage
             </Button>
           </CardActions>
-        </>
+        </div>
       )}
     </>
   );
