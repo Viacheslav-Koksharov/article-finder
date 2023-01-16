@@ -1,4 +1,8 @@
 @import "./base/global.scss";
-@import "./components/container.scss";
-@import "./components/homepage.scss";
+@import "./components/articleItem";
+@import "./components/articleList";
+@import "./components/articlepage";
+@import "./components/container";
 @import "./components/filter.scss";
+@import "./components/homepage";
+@import "./components/loader";

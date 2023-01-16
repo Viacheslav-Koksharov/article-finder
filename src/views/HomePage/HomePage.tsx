@@ -2,14 +2,15 @@ import { useState, useEffect } from 'react';
 import Container from '../../components/Container';
 import Filter from '../../components/Filter';
 import ArticleList from '../../components/ArticleList';
-import { getArticles } from '../../services/api.js';
-import '../../sass/components/_homepage.scss';
+import { getArticles } from '../../services/api';
+import '../../sass/main.scss';
+import { IArticleItem } from "../../interfaces/ArticleItem.interfaces";
 
 const HomePage = () => {
-  const [articles, setArticles] = useState(null);
+  const [articles, setArticles] = useState<IArticleItem[]>([]);
   const [filter, setFilter] = useState('');
  
-  const changeFilter = e => {
+  const changeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFilter(e.currentTarget.value);
   };
   

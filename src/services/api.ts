@@ -6,7 +6,7 @@ const getArticles= () => {
     return axios.get("/articles");
 };
 
-const getArticleById= (id) => {
+const getArticleById= (id: string | undefined) => {
     return axios.get(`/articles/${id}`);
 };
 

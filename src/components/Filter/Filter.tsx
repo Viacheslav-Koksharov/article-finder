@@ -1,9 +1,9 @@
-import React from 'react';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import '../../sass/components/_filter.scss';
+import '../../sass/main.scss';
+import { IFilter } from "../../interfaces/Filter.interfases";
 
-const Filter = ({value,onFilterArticles}) => {
+const Filter = ({value,onFilterArticles}: IFilter) => {
   return (
     <div className="filter__container">
       <label className="label">Filter by keywords</label>

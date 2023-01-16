@@ -11,7 +11,7 @@ const ArticlePage = lazy(() =>
   ),
 );
 
-const App = () => {
+const App: React.FC = () => {
   return (
       <Suspense
         fallback={
