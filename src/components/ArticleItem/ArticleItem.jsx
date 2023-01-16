@@ -17,9 +17,7 @@ const ArticleItem = ({ id, imageUrl, publishedAt, title,summary,filter}) => {
     const shortString = (string) => {
         return string.length > 100? `${string.slice(0, 100)}...` : string;
       };
-    const shortTitle = (string) => {
-        return string.length > 50? `${string.slice(0, 50)}...` : string;
-      };
+
 //       const Hightlight = (props)=>{
 //         const {filter, str} = props
 //         if(!filter) return str
@@ -54,7 +52,7 @@ const ArticleItem = ({ id, imageUrl, publishedAt, title,summary,filter}) => {
             </Typography>                     
             <Typography gutterBottom variant="h5" component="div" className="card_title"> 
             <Keywords value={`${filter}`}>         
-              {shortTitle(title)} 
+              {title} 
               </Keywords>                 
             </Typography>            
             <Typography variant="body2" color="text.secondary" className="card_summary">
