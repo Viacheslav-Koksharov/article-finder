@@ -1,12 +1,13 @@
 import React from 'react';
-import moment from "moment";
 import { Link } from 'react-router-dom';
+import moment from "moment";
 import Keywords from 'react-keywords';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
 import '../../sass/components/_articleItem.scss';
 
@@ -49,7 +50,7 @@ const ArticleItem = ({ id, imageUrl, publishedAt, title,summary,filter}) => {
           />
           <CardContent sx={{ padding:0}}>
             <Typography variant="body2" color="text.secondary" className="card_date">
-              {moment(publishedAt).format("MMMM Do, YYYY")}
+            <CalendarTodayIcon style={{marginRight: "6px", width: 13, height: 13}}/>{moment(publishedAt).format("MMMM Do, YYYY")}
             </Typography>                     
             <Typography gutterBottom variant="h5" component="div" className="card_title"> 
             <Keywords value={`${filter}`}>         
@@ -63,7 +64,7 @@ const ArticleItem = ({ id, imageUrl, publishedAt, title,summary,filter}) => {
             </Typography>                
           </CardContent>         
           <CardActions sx={{ padding:0}}>
-            <Link to={`/articles/${id}`} className="card_link">Read more<EastOutlinedIcon style={{marginLeft: "6px"}}/></Link>
+            <Link to={`/articles/${id}`} className="card_link">Read more<EastOutlinedIcon style={{marginLeft: "6px", width: 12, height: 10}}/></Link>
           </CardActions>
         </Card>
       </li>

@@ -8,11 +8,11 @@ import '../../sass/components/_homepage.scss';
 const HomePage = () => {
   const [articles, setArticles] = useState(null);
   const [filter, setFilter] = useState('');
+ 
   const changeFilter = e => {
     setFilter(e.currentTarget.value);
   };
-//   console.log(articles)
-//   console.log(filter)
+  
   const getVisibleArticles = () => {
     const normalizedFilter = filter.toLowerCase();
 

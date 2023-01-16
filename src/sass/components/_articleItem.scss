@@ -7,6 +7,8 @@
     }
 }
 .card_date{
+    display: flex;
+    align-items: center;
     padding:25px 0 24px 25px;
     font-family: Montserrat, sans-serif;
     font-size: 14px;
@@ -31,6 +33,6 @@
 .card_link{
     display: flex;
     align-items: center;
-    margin:0;
+    margin-left:0;
     padding:0 0 25px 25px;  
 }
