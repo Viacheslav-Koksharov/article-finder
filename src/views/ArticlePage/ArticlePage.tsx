@@ -1,19 +1,23 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import WestOutlinedIcon from '@mui/icons-material/WestOutlined';
-import { getArticleById } from '../../services/api';
-import { IArticleItem } from "../../interfaces/ArticleItem.interfaces";
+import { getArticleById } from '../../redux/articles/articles-operations';
+import articlesSelectors from '../../redux/articles/articles-selectors';
 import '../../sass/main.scss';
 
 const MovieReview = () => {
   const { id } = useParams();
-  const [article, setArticle] = useState<IArticleItem>();
+  const article = useSelector(articlesSelectors.articleView);
+
+  const dispatch: any = useDispatch();
 
   useEffect(() => {
-    getArticleById(id).then(request => setArticle(request.data));
-  }, [id]);
+    //@ts-ignore
+    dispatch(getArticleById(id))
+  }, [dispatch, id]);
 
   return (
     <>
